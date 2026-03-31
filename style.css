@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #ff0033;
+  text-shadow: 0 0 10px #ff0033, 0 0 20px #ff0033;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  color: #ff0033;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 5px #ff0033, 0 0 10px #ff0033;
+}
+
+.gallery {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.flip-card {
+  display: inline-block;
+  background-color: transparent;
+  width: 250px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card.flip .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 3px solid #ff0033;
+  box-shadow: 0 0 20px #ff0033, 0 0 40px #ff0033;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  background-color: #111;
+  color: #ff0033;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-shadow: 0 0 5px #ff0033;
+}
+
+.flip-card-back h3 {
+  margin-bottom: 10px;
+}
+
+.flip-card-back p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.flip-card-back a {
+  color: #ff66aa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.flip-card-back a:hover {
+  color: #ffffff;
+}
+
+.info {
+  margin: 30px 0;
+}
+
+.info ul {
+  list-style: inside disc;
+  text-align: left;
+  display: inline-block;
+  color: #ff66aa;
+}
+
+.highlight {
+  margin-bottom: 30px;
+  font-style: italic;
+  color: #ff3399;
+}
+
+.links {
+  margin-bottom: 20px;
+}
+
+.links ul {
+  list-style: none;
+}
+
+.links ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.links ul li a {
+  color: #ff66aa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.links ul li a:hover {
+  color: #ffffff;
+}
+
+footer {
+  padding: 15px 0;
+  border-top: 2px solid #ff0033;
+  color: #ff0033;
+  text-shadow: 0 0 5px #ff0033, 0 0 10px #ff0033;
+  font-size: 0.9rem;
+}
+
+.first-card {
+  border: 3px solid #ff0033;
+  box-shadow: 0 0 20px #ff0033, 0 0 40px #ff0033;
+}
+
+.first-card .flip-card-back {
+  color: #ff0033;
+  text-shadow: 0 0 5px #ff0033;
+}
+
+.first-card .flip-card-back a {
+  color: #ff0033;
+}
+
+.first-card .flip-card-back a:hover {
+  color: #ffffff;
+}
+
+.second-card {
+  border: 3px solid #aaaaaa;
+  box-shadow: 0 0 20px #aaaaaa, 0 0 40px #aaaaaa;
+}
+
+.second-card .flip-card-back {
+  background-color: #111111;
+  color: #aaaaaa;
+  text-shadow: 0 0 5px #aaaaaa;
+}
+
+.second-card .flip-card-back a {
+  color: #aaaaaa;
+}
+
+.second-card .flip-card-back a:hover {
+  color: #ffffff;
+}
+
+.third-card {
+  border: 3px solid #9900ff;
+  box-shadow: 0 0 20px #9900ff, 0 0 40px #9900ff;
+}
+
+.third-card .flip-card-back {
+  color: #9900ff;
+  text-shadow: 0 0 5px #9900ff;
+}
+
+.third-card .flip-card-back a {
+  color: #9900ff;
+}
+
+.third-card .flip-card-back a:hover {
+  color: #ffffff;
+}
